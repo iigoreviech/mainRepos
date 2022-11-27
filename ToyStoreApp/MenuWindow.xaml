@@ -1,0 +1,47 @@
+﻿<Window x:Class="ToyStoreApp.MenuWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ToyStoreApp"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="MenuWindow" Height="600" Width="1000" Icon="/Source/Иконка.ico">
+    <Grid Background="#ffdadada">
+        <Border MinWidth="400" Margin="15" Background="White"
+                VerticalAlignment="Center" Padding="30"
+                MaxWidth="900" CornerRadius="25">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray"
+                                  ShadowDepth="0"/>
+            </Border.Effect>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="61*"/>
+                    <RowDefinition Height="373*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200*"/>
+                    <ColumnDefinition Width="600*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Vertical" Background="Gainsboro" Grid.RowSpan="2">
+                    <Button Content="Главная" Margin="10"/>
+                    <Button Content="Каталог" Margin="10"/>
+                    <Button Content="Избранное" Margin="10"/>
+                    <Button Content="Корзина" Margin="10"/>
+                    <Button Content="Мой профиль" Margin="10"/>
+                    <Button Content="Тех. поддержка" Margin="10 60 10 0"/>
+                    <Button Content="Выйти" Margin="10 10 10 10" Style="{StaticResource MaterialDesignFlatButton}"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Grid.RowSpan="1" Orientation="Horizontal" Background="#FFFF9D63">
+                    <TextBlock Text="Онлайн-магазин игрушек «Песочница»" FontSize="30"
+                           FontWeight="Bold" Margin="20 10 0 10"/>
+                </StackPanel>
+                <Grid Grid.Column="1" Grid.RowSpan="2">
+                    <Image HorizontalAlignment="Center" Source="/Source/Лого.png" Margin="0,55,0,45" Width="367" />
+                </Grid>
+
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
