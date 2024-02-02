@@ -1,0 +1,68 @@
+﻿<Page x:Class="GameProApp.PlayersPg"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GameProApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="570" d:DesignWidth="1000"
+      Title="PlayersPg">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="350"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Игроки" Grid.Row="0" Style="{StaticResource TBlock}" FontSize="30" Margin="100 0 0 0"/>
+        <TextBox x:Name="tbSearchPlayer" Style="{StaticResource TB}" Grid.Row="1" Margin="6" Width="800" FontSize="16" TextChanged="tbSearchPlayer_TextChanged"/>
+        <TextBlock Text="Поиск по нику игрока..." Grid.Row="1" FontSize="16" IsHitTestVisible="False"
+                   Foreground="#FF535559" FontFamily="Comic Sans MS" Margin="110 13 0 0">
+            <TextBlock.Style>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text, ElementName=tbSearchPlayer}" Value="">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+        <Grid x:Name="filtersPlayers" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Style="{StaticResource TBlock}" Text="Фильтры" Grid.Column="0" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+            <ComboBox x:Name="comboCountries" Grid.Column="1" Width="150" Margin="5" SelectedValue="{Binding CountryFilter}" SelectionChanged="comboCountries_SelectionChanged" 
+                      FontSize="15" FontFamily="Comic Sans MS"/>
+
+            <ComboBox x:Name="comboPositions" Grid.Column="2" Width="150" Margin="5" SelectedValue="{Binding PositionFilter}"
+                      FontSize="15" FontFamily="Comic Sans MS" SelectionChanged="comboPositions_SelectionChanged"/>
+        </Grid>
+        <StackPanel Grid.Row="3" Orientation="Horizontal">
+            <TextBlock Text="Игрок" Style="{StaticResource TBlock}" FontSize="20" Margin="35 0 0 0"/>
+            <TextBlock Text="Команда" Style="{StaticResource TBlock}" FontSize="20" Margin="260 0 0 0"/>
+            <TextBlock Text="Страна" Style="{StaticResource TBlock}" FontSize="20" Margin="140 0 0 0"/>
+            <TextBlock Text="Позиция" Style="{StaticResource TBlock}" FontSize="20" Margin="88 0 0 0"/>
+            <TextBlock Text="Возраст" Style="{StaticResource TBlock}" FontSize="20" Margin="65 0 0 0"/>
+        </StackPanel>
+        <ListView x:Name="lvPlayers" Grid.Row="4" Margin="5" Background="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}},
+                  Path=Background}" BorderBrush="Transparent" View="{x:Null}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+        </ListView>
+        <TextBlock x:Name="tbNoResults" Text="Результатов поиска не найдено" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
+           Visibility="Collapsed" FontSize="18" FontWeight="Bold" Style="{StaticResource TBlock}" Margin="0 20"/>
+        <StackPanel x:Name="adminBtns" Grid.Row="5" Orientation="Horizontal">
+            <Button x:Name="btnAdd" Content="Добавить" Style="{StaticResource Btn}" Width="130" Margin="150 0 0 0" Click="btnAdd_Click"/>
+            <Button x:Name="btnEdit" Content="Изменить" Style="{StaticResource Btn}" Width="130" Margin="150 0 0 0" Click="btnEdit_Click"/>
+            <Button x:Name="btnDelete" Content="Удалить" Style="{StaticResource Btn}" Width="130" Margin="150 0 0 0" Click="btnDelete_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>

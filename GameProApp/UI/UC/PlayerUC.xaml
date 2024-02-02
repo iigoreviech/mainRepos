@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="GameProApp.PlayerUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GameProApp"
+             mc:Ignorable="d" 
+             d:DesignHeight="70" d:DesignWidth="900">
+    <Border x:Name="border" Background="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}},
+                  Path=Background}" BorderThickness="3" BorderBrush="Transparent" Width="1000">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="70"/>
+                <ColumnDefinition Width="180"/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition Width="140"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="0" BorderThickness="2" Margin="5" Height="50" Width="50">
+                <Image x:Name="imgPlayer" Source="/Resources/Players photo/UnknownPlayer.png" />
+            </Border>
+
+            <TextBlock Grid.Column="1" Text="{Binding Player.gameNickname}" VerticalAlignment="Center" Style="{StaticResource TBlock}" FontSize="20"/>
+
+            <Image x:Name="imgTeamPlayer" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Height="40" Width="40" Margin="0 0 -25 0"/>
+
+            <TextBlock Grid.Column="3" Text="{Binding Player.Team.teamName}" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource TBlock}" FontSize="19"/>
+
+            <Image x:Name="imgCountryPlayer" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Right" Height="20" Width="20" Margin="0 0 -25 0"/>
+
+            <TextBlock Grid.Column="5" Text="{Binding Player.Country.countryName}" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource TBlock}" FontSize="19" Margin="0 0 -50 0"/>
+
+            <TextBlock Grid.Column="6" Text="{Binding Player.GameRole1.titleRole}" VerticalAlignment="Center" Style="{StaticResource TBlock}" FontSize="19" HorizontalAlignment="Center"/>
+
+            <TextBlock Grid.Column="7" Text="{Binding Player.age}" VerticalAlignment="Center" Style="{StaticResource TBlock}" FontSize="19" HorizontalAlignment="Left" Margin="10 0 0 0"/>
+        </Grid>
+    </Border>
+</UserControl>

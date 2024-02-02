@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f223ddbd6aa44d6baccc0492b7e7e26a" Name="Diagram1">
+        <EntityTypeShape EntityType="GameProDataBaseModel.City" Width="1.5" PointX="5.25" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameProDataBaseModel.Country" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameProDataBaseModel.GameRole" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameProDataBaseModel.Match" Width="1.5" PointX="9.75" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameProDataBaseModel.Player" Width="1.5" PointX="3" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameProDataBaseModel.Role" Width="1.5" PointX="9.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameProDataBaseModel.sysdiagram" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameProDataBaseModel.TeamComposition" Width="1.5" PointX="5.25" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameProDataBaseModel.Team" Width="1.5" PointX="7.5" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameProDataBaseModel.Tournament" Width="1.5" PointX="7.5" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameProDataBaseModel.TournamentType" Width="1.5" PointX="5.25" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameProDataBaseModel.User" Width="1.5" PointX="12" PointY="8" IsExpanded="true" />
+        <AssociationConnector Association="GameProDataBaseModel.FK_Tournament_City" ManuallyRouted="false" />
+        <AssociationConnector Association="GameProDataBaseModel.FK_Players_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="GameProDataBaseModel.FK_Players_GameRole" ManuallyRouted="false" />
+        <AssociationConnector Association="GameProDataBaseModel.FK_Match_Teams" ManuallyRouted="false" />
+        <AssociationConnector Association="GameProDataBaseModel.FK_Match_Teams1" ManuallyRouted="false" />
+        <AssociationConnector Association="GameProDataBaseModel.FK_Match_Tournament" ManuallyRouted="false" />
+        <AssociationConnector Association="GameProDataBaseModel.FK_Players_Teams" ManuallyRouted="false" />
+        <AssociationConnector Association="GameProDataBaseModel.FK_TeamComposition_Players" ManuallyRouted="false" />
+        <AssociationConnector Association="GameProDataBaseModel.FK_TeamComposition_Players1" ManuallyRouted="false" />
+        <AssociationConnector Association="GameProDataBaseModel.FK_TeamComposition_Players2" ManuallyRouted="false" />
+        <AssociationConnector Association="GameProDataBaseModel.FK_TeamComposition_Players3" ManuallyRouted="false" />
+        <AssociationConnector Association="GameProDataBaseModel.FK_TeamComposition_Players4" ManuallyRouted="false" />
+        <AssociationConnector Association="GameProDataBaseModel.FK_TeamComposition_Players5" ManuallyRouted="false" />
+        <AssociationConnector Association="GameProDataBaseModel.FK_User_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="GameProDataBaseModel.FK_Teams_TeamComposition" ManuallyRouted="false" />
+        <AssociationConnector Association="GameProDataBaseModel.FK_Tournament_TournamentType" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

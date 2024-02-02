@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище GameProDataBaseModelContainer" CdmEntityContainer="GameProDataBaseEntities8">
+    <EntitySetMapping Name="Cities">
+      <EntityTypeMapping TypeName="GameProDataBaseModel.City">
+        <MappingFragment StoreEntitySet="City">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="cityName" ColumnName="cityName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Countries">
+      <EntityTypeMapping TypeName="GameProDataBaseModel.Country">
+        <MappingFragment StoreEntitySet="Country">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="countryName" ColumnName="countryName" />
+          <ScalarProperty Name="countryImagePath" ColumnName="countryImagePath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GameRoles">
+      <EntityTypeMapping TypeName="GameProDataBaseModel.GameRole">
+        <MappingFragment StoreEntitySet="GameRole">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="titleRole" ColumnName="titleRole" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Matches">
+      <EntityTypeMapping TypeName="GameProDataBaseModel.Match">
+        <MappingFragment StoreEntitySet="Match">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idTournament" ColumnName="idTournament" />
+          <ScalarProperty Name="idTeamOne" ColumnName="idTeamOne" />
+          <ScalarProperty Name="pointsTeamOne" ColumnName="pointsTeamOne" />
+          <ScalarProperty Name="idTeamTwo" ColumnName="idTeamTwo" />
+          <ScalarProperty Name="pointsTeamTwo" ColumnName="pointsTeamTwo" />
+          <ScalarProperty Name="dateTimeStart" ColumnName="dateTimeStart" />
+          <ScalarProperty Name="matchStage" ColumnName="matchStage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Players">
+      <EntityTypeMapping TypeName="GameProDataBaseModel.Player">
+        <MappingFragment StoreEntitySet="Players">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="patronymic" ColumnName="patronymic" />
+          <ScalarProperty Name="idTeam" ColumnName="idTeam" />
+          <ScalarProperty Name="birthDate" ColumnName="birthDate" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="idCountry" ColumnName="idCountry" />
+          <ScalarProperty Name="gameNickname" ColumnName="gameNickname" />
+          <ScalarProperty Name="gameRole" ColumnName="gameRole" />
+          <ScalarProperty Name="playerImagePath" ColumnName="playerImagePath" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="GameProDataBaseModel.Role">
+        <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="GameProDataBaseModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TeamCompositions">
+      <EntityTypeMapping TypeName="GameProDataBaseModel.TeamComposition">
+        <MappingFragment StoreEntitySet="TeamComposition">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idPlayerOne" ColumnName="idPlayerOne" />
+          <ScalarProperty Name="idPlayerTwo" ColumnName="idPlayerTwo" />
+          <ScalarProperty Name="idPlayerThree" ColumnName="idPlayerThree" />
+          <ScalarProperty Name="idPlayerFour" ColumnName="idPlayerFour" />
+          <ScalarProperty Name="idPlayerFive" ColumnName="idPlayerFive" />
+          <ScalarProperty Name="idCoach" ColumnName="idCoach" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Teams">
+      <EntityTypeMapping TypeName="GameProDataBaseModel.Team">
+        <MappingFragment StoreEntitySet="Teams">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="teamName" ColumnName="teamName" />
+          <ScalarProperty Name="teamLogoPath" ColumnName="teamLogoPath" />
+          <ScalarProperty Name="idTeamComposition" ColumnName="idTeamComposition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tournaments">
+      <EntityTypeMapping TypeName="GameProDataBaseModel.Tournament">
+        <MappingFragment StoreEntitySet="Tournament">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="dateStart" ColumnName="dateStart" />
+          <ScalarProperty Name="dateEnd" ColumnName="dateEnd" />
+          <ScalarProperty Name="cityEvent" ColumnName="cityEvent" />
+          <ScalarProperty Name="prizeFund" ColumnName="prizeFund" />
+          <ScalarProperty Name="tournamentType" ColumnName="tournamentType" />
+          <ScalarProperty Name="tournamentImagePath" ColumnName="tournamentImagePath" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TournamentTypes">
+      <EntityTypeMapping TypeName="GameProDataBaseModel.TournamentType">
+        <MappingFragment StoreEntitySet="TournamentType">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="titleType" ColumnName="titleType" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="GameProDataBaseModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="login" ColumnName="login" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="idRole" ColumnName="idRole" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

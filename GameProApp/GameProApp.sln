@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameProApp", "GameProApp.csproj", "{FFA2C074-41FD-4E0B-8871-E77FCD607EA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameProLoginTest", "..\GameProLoginTest\GameProLoginTest.csproj", "{A5676A95-23CA-4B22-A4D7-B6CE567A534B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{1041C627-1448-4035-AC96-B6D9D654B413}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FFA2C074-41FD-4E0B-8871-E77FCD607EA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFA2C074-41FD-4E0B-8871-E77FCD607EA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFA2C074-41FD-4E0B-8871-E77FCD607EA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFA2C074-41FD-4E0B-8871-E77FCD607EA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5676A95-23CA-4B22-A4D7-B6CE567A534B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5676A95-23CA-4B22-A4D7-B6CE567A534B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5676A95-23CA-4B22-A4D7-B6CE567A534B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5676A95-23CA-4B22-A4D7-B6CE567A534B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A5676A95-23CA-4B22-A4D7-B6CE567A534B} = {1041C627-1448-4035-AC96-B6D9D654B413}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5AD29DE4-F214-400E-9BA5-892188D74329}
+	EndGlobalSection
+EndGlobal

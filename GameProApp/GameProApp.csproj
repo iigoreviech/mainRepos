@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\MSTest.TestAdapter.3.0.4\build\net462\MSTest.TestAdapter.props" Condition="Exists('packages\MSTest.TestAdapter.3.0.4\build\net462\MSTest.TestAdapter.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FFA2C074-41FD-4E0B-8871-E77FCD607EA1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GameProApp</RootNamespace>
+    <AssemblyName>GameProApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\MSTest.TestFramework.3.0.4\lib\net462\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\MSTest.TestFramework.3.0.4\lib\net462\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Configuration.ConfigurationManager.7.0.0\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.AccessControl.6.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Permissions.7.0.0\lib\net462\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Data\City.cs">
+      <DependentUpon>DateBaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Country.cs">
+      <DependentUpon>DateBaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DateBaseModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DateBaseModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DateBaseModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DateBaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DateBaseModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DateBaseModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GameRole.cs">
+      <DependentUpon>DateBaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Match.cs">
+      <DependentUpon>DateBaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Player.cs">
+      <DependentUpon>DateBaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Role.cs">
+      <DependentUpon>DateBaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\sysdiagram.cs">
+      <DependentUpon>DateBaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Team.cs">
+      <DependentUpon>DateBaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TeamComposition.cs">
+      <DependentUpon>DateBaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Tournament.cs">
+      <DependentUpon>DateBaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TournamentType.cs">
+      <DependentUpon>DateBaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Pgs\AddEditMatchPg.xaml.cs">
+      <DependentUpon>AddEditMatchPg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Pgs\AddEditPlayerPg.xaml.cs">
+      <DependentUpon>AddEditPlayerPg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Pgs\AddEditTeamPg.xaml.cs">
+      <DependentUpon>AddEditTeamPg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Pgs\AddEditTournamentPg.xaml.cs">
+      <DependentUpon>AddEditTournamentPg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Libs\DateConverter.cs" />
+    <Compile Include="Libs\Image.cs" />
+    <Compile Include="Libs\Manager.cs" />
+    <Compile Include="Data\User.cs">
+      <DependentUpon>DateBaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Users.cs" />
+    <Page Include="UI\Pgs\AddEditMatchPg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Pgs\AddEditPlayerPg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Pgs\AddEditTeamPg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Pgs\AddEditTournamentPg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Pgs\MatchesPg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\UC\MatchUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Pgs\TeamsPg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\UC\TeamUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Pgs\PlayersPg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\UC\PlayerUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\UC\TournamentUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Pgs\TournamentsPg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Wnds\AuthWnd.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Libs\PrizeFundConverter.cs" />
+    <Compile Include="UI\Pgs\MatchesPg.xaml.cs">
+      <DependentUpon>MatchesPg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UC\MatchUC.xaml.cs">
+      <DependentUpon>MatchUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Pgs\TeamsPg.xaml.cs">
+      <DependentUpon>TeamsPg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UC\TeamUC.xaml.cs">
+      <DependentUpon>TeamUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Pgs\PlayersPg.xaml.cs">
+      <DependentUpon>PlayersPg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UC\PlayerUC.xaml.cs">
+      <DependentUpon>PlayerUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UC\TournamentUC.xaml.cs">
+      <DependentUpon>TournamentUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Pgs\TournamentsPg.xaml.cs">
+      <DependentUpon>TournamentsPg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Wnds\AuthWnd.xaml.cs">
+      <DependentUpon>AuthWnd.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="UI\Wnds\MenuWnd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="UI\Wnds\MenuWnd.xaml.cs">
+      <DependentUpon>MenuWnd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="Data\DateBaseModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DateBaseModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Data\DateBaseModel.edmx.diagram">
+      <DependentUpon>DateBaseModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Imgs\svernut_notActive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Imgs\close_notActive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Imgs\close_Active.png" />
+    <Resource Include="Resources\Imgs\svernut_Active.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Imgs\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Teams logo\Dire.png" />
+    <Resource Include="Resources\Teams logo\Dodge.png" />
+    <Resource Include="Resources\Teams logo\Morph.png" />
+    <Resource Include="Resources\Teams logo\Nova.png" />
+    <Resource Include="Resources\Teams logo\Phoenix.png" />
+    <Resource Include="Resources\Teams logo\Radiant.png" />
+    <Resource Include="Resources\Teams logo\Ritle.png" />
+    <Resource Include="Resources\Teams logo\Shadow.png" />
+    <Resource Include="Resources\Teams logo\Thunder.png" />
+    <Resource Include="Resources\Teams logo\Vortex.png" />
+    <Resource Include="Resources\Players photo\UnknownPlayer.png" />
+    <Resource Include="Resources\Country photos\Belarus.png" />
+    <Resource Include="Resources\Country photos\China.png" />
+    <Resource Include="Resources\Country photos\Kazakhstan.png" />
+    <Resource Include="Resources\Country photos\Russia.png" />
+    <Resource Include="Resources\Country photos\Ukraine.png" />
+    <Resource Include="Resources\Tournaments logo\Unknown.png" />
+    <Resource Include="Resources\Tournaments logo\ESR.png" />
+    <Resource Include="Resources\Tournaments logo\GodjiGame.png" />
+    <Resource Include="Resources\Tournaments logo\Qualas.png" />
+    <Resource Include="Resources\Tournaments logo\StarLidder.png" />
+    <Resource Include="Resources\Tournaments logo\Torcout.png" />
+    <Resource Include="Resources\Imgs\eye hide.png" />
+    <Resource Include="Resources\Imgs\eye open.png" />
+    <Resource Include="Resources\Imgs\burger menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Data\DateBaseModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DateBaseModel.edmx</DependentUpon>
+      <LastGenOutput>DateBaseModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\DateBaseModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DateBaseModel.edmx</DependentUpon>
+      <LastGenOutput>DateBaseModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\MSTest.TestAdapter.3.0.4\build\net462\MSTest.TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\MSTest.TestAdapter.3.0.4\build\net462\MSTest.TestAdapter.props'))" />
+    <Error Condition="!Exists('packages\MSTest.TestAdapter.3.0.4\build\net462\MSTest.TestAdapter.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\MSTest.TestAdapter.3.0.4\build\net462\MSTest.TestAdapter.targets'))" />
+  </Target>
+  <Import Project="packages\MSTest.TestAdapter.3.0.4\build\net462\MSTest.TestAdapter.targets" Condition="Exists('packages\MSTest.TestAdapter.3.0.4\build\net462\MSTest.TestAdapter.targets')" />
+</Project>
